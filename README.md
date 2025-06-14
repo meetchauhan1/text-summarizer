@@ -2,8 +2,6 @@
 
 A Streamlit-based web application that generates concise summaries from large blocks of text or uploaded documents. The app supports both plain text and PDF files, offering multiple output formats for the summaries.
 
-![Text Summarizer Demo](https://via.placeholder.com/800x400.png?text=Text+Summarizer+Demo)
-
 ## ✨ Features
 
 - **Text Input**: Paste or type your text directly into the application
@@ -23,8 +21,11 @@ A Streamlit-based web application that generates concise summaries from large bl
 
 - Python 3.8 or higher
 - pip (Python package manager)
+- (Optional) Docker and Docker Compose
 
-### Installation
+### Installation with Python
+
+#### Method 1: Using pip (Recommended)
 
 1. Clone the repository:
    ```bash
@@ -32,17 +33,72 @@ A Streamlit-based web application that generates concise summaries from large bl
    cd text-summarizer
    ```
 
-2. Install the required packages:
+2. Create and activate a virtual environment (recommended):
+   ```bash
+   python -m venv venv
+   # On Windows:
+   .\venv\Scripts\activate
+   # On macOS/Linux:
+   # source venv/bin/activate
+   ```
+
+3. Install the required packages:
    ```bash
    pip install -r requirements.txt
    ```
 
-3. Run the application:
+4. Run the application:
    ```bash
    streamlit run app.py
    ```
 
-4. Open your browser and navigate to `http://localhost:8501`
+5. Open your browser and navigate to `http://localhost:8501`
+
+#### Method 2: Using Docker
+
+1. Make sure you have Docker installed and running on your system.
+   
+2. Install the required packages:
+   ```bash
+   pip install -r requirements.txt
+   ```
+3. Build the Docker image:
+   ```bash
+   docker build -t text-summarizer .
+   ```
+
+4. Run the container:
+   ```bash
+   docker run -p 8501:8501 text-summarizer
+   ```
+   Or with Docker Compose:
+   ```bash
+   docker-compose up
+   ```
+
+5. The application will be available at `http://localhost:8501`
+
+##### Additional Docker Options:
+
+- To run in detached mode (in background):
+  ```bash
+  docker run -d -p 8501:8501 --name my-summarizer text-summarizer
+  ```
+
+- To view logs:
+  ```bash
+  docker logs -f my-summarizer
+  ```
+
+- To stop the container:
+  ```bash
+  docker stop my-summarizer
+  docker rm my-summarizer  # To remove the container after stopping
+  ```
+
+### Installation
+
+See the installation methods above for both Python and Docker setups.
 
 ## 🛠️ Usage
 
@@ -66,7 +122,6 @@ A Streamlit-based web application that generates concise summaries from large bl
 
 ## 🌐 Live Demo
 
-Check out the live demo [here](https://your-app-url.herokuapp.com) (if deployed)
 
 ## 🤝 Contributing
 
@@ -88,3 +143,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - Icons from [Font Awesome](https://fontawesome.com/)
 - Color scheme inspired by modern web design trends
 
+---
