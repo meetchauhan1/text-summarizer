@@ -27,7 +27,7 @@ with st.sidebar:
     1.0.0
 
     ## Source Code
-    [GitHub Repository](https://github.com/yourusername/text-summarizer)
+    [GitHub Repository](https://github.com/meetchauhan1/text-summarizer)
 
     ---
     Powered by Streamlit and AI Summarization
