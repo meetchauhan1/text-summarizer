@@ -1,0 +1,16 @@
+FROM python:3.10-slim
+
+WORKDIR /app
+
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Install SpaCy English model
+RUN python -m spacy download en_core_web_sm
+
+COPY . .
+
+EXPOSE 8501
+ENV GIT_PYTHON_REFRESH=quiet
+
+CMD ["streamlit", "run", "app.py", "--server.port=8501", "--server.address=0.0.0.0"]

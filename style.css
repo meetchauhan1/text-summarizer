@@ -1,0 +1,243 @@
+/* Base body styles */
+body {
+    background-color: #fff5e6; /* light cream sunset tone */
+    color: #000000; /* black text */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+/* Streamlit main block */
+[data-testid="stAppViewContainer"] {
+    background-color: #fff5e6 !important;
+    color: #000000;
+    max-width: 100% !important;
+    width: 100% !important;
+    padding: 1rem !important;
+    margin: 0 !important;
+}
+
+/* Main content area */
+.main .block-container {
+    max-width: 100% !important;
+    padding-left: 2rem !important;
+    padding-right: 2rem !important;
+    padding-top: 1rem !important;
+}
+
+/* Radio button group styling */
+.stRadio > div {
+    display: flex;
+}
+.st-emotion-cache-seewz2 h4 {
+    font-size: 1.5rem;
+}
+
+
+/* Radio buttons */
+.stRadio > div {
+    flex-direction: row !important;
+    gap: 1rem;
+    align-items: center;
+    margin-top: 0%;
+}
+
+/* Radio button labels */
+.stRadio > div label,
+.stRadio > div[data-baseweb="radio"] label,
+.stRadio > div[data-baseweb="radio"] div[role="radiogroup"] label {
+    color: #000000 !important;
+    -webkit-text-fill-color: #000000 !important;
+}
+
+/* Ensure radio button text stays black on all states */
+.stRadio > div[data-baseweb="radio"] div[role="radiogroup"] label:hover,
+.stRadio > div[data-baseweb="radio"] div[role="radiogroup"] label:active,
+.stRadio > div[data-baseweb="radio"] div[role="radiogroup"] label:focus {
+    color: #000000 !important;
+}
+
+
+/* Header and Labels */
+h1, h2, h3, h4, h5, h6, label, .stTextArea > label, .stTextInput > label {
+    color: #ff7b00 !important; /* black */
+}
+
+/* Sidebar */
+section[data-testid="stSidebar"] {
+    background-color: #ffe5cc !important; /* slightly deeper cream for contrast */
+    color: #000000;
+    border-right: 2px solid #f39c12;
+    padding: 0 1rem 1rem 1rem !important;
+}
+
+/* Input fields and text areas */
+textarea, 
+input,
+.stTextArea > div[data-baseweb="textarea"] textarea,
+.stTextArea > div[data-baseweb="textarea"] div,
+.stTextArea > div[data-baseweb="textarea"] {
+    background-color: #ffffff !important;
+    color: #000000 !important;
+    border: 1px solid #e67e22 !important;
+    
+    width: 100% !important;
+    box-sizing: border-box !important;
+}
+
+/* Output text area specifically */
+.stCodeBlock > pre,
+.stCodeBlock > div,
+.stCodeBlock,
+.stCodeBlock code,
+.stCodeBlock pre,
+.stCodeBlock pre code {
+    background-color: #ffffff !important;
+    color: #000000 !important;
+    border: 1px solid #e67e22 !important;
+    border-radius: 4px !important;
+    padding: 12px !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    white-space: pre-wrap !important;
+}
+
+/* Placeholder text color */
+::placeholder {
+    color: #000000 !important;
+    opacity: 1 !important;
+}
+
+/* For WebKit browsers */
+::-webkit-input-placeholder {
+    color: #000000 !important;
+}
+
+/* For Firefox */
+::-moz-placeholder {
+    color: #000000 !important;
+    opacity: 1 !important;
+}
+
+/* For Internet Explorer/Edge */
+:-ms-input-placeholder {
+    color: #000000 !important;
+}
+
+/* For Microsoft Edge */
+::-ms-input-placeholder {
+    color: #000000 !important;
+}
+
+/* Button styles */
+button[kind="primary"], button {
+    background-color: #e67e22 !important;
+    color: #ffffff !important;
+    border-radius: 6px !important;
+    border: none !important;
+    padding: 0.6em 1.2em;
+    font-weight: bold;
+}
+
+/* Metrics */
+[data-testid="stMetricValue"] {
+    color: #e67e22;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+/* Download and copy button wrappers */
+button:focus, button:hover {
+    background-color: #d35400 !important;
+    color: #ffffff !important;
+}
+
+/* Custom analytics box heading */
+.analytics-box h3 {
+    margin-top: 0;
+    color: #e67e22;
+}
+
+/* Custom copy/paste JS buttons (override margin/padding if needed) */
+button.custom-btn {
+    background-color: #e67e22;
+    color: white;
+    border: none;
+    padding: 0.5em 1em;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* Warning message styling */
+.stAlert [data-testid="stMarkdownContainer"] {
+    color: #000000 !important;
+}
+
+.stAlert [data-testid="stMarkdownContainer"] p {
+    color: #000000 !important;
+}
+
+button.custom-btn:hover {
+    background-color: #d35400;
+}
+button[kind="primary"] {
+    margin-top: 10px;
+}
+
+/* Remove margin from output format label */
+
+.st-emotion-cache-1ihwvbb {
+    display: block;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    height: 3.75rem;
+    background: #ffc48a;
+    outline: none;
+    z-index: 999990;
+}
+.st-emotion-cache-1erivf3 {
+    display: flex
+;
+    -webkit-box-align: center;
+    align-items: center;
+    padding: 1rem;
+    background-color: #ffc48a;
+    border-radius: 0.5rem;
+    color: rgb(250, 250, 250);
+}
+.st-emotion-cache-1erivf3 {
+    display: flex
+;
+    -webkit-box-align: center;
+    align-items: center;
+    padding: 1rem;
+    background-color: #ffc48a;
+    border-radius: 0.5rem;
+    color: rgb(0 0 0);
+}
+.st-emotion-cache-c8ta4l {
+    color: rgb(0 0 0 / 60%);
+    font-size: 0.875rem;
+    line-height: 1.25;
+}
+.st-emotion-cache-1ocj5rb {
+    background: rgb(250, 250, 250);
+    border-radius: 0.5rem;
+    color: rgb(0 0 0);
+    font-size: 0.75rem;
+    font-family: "Source Code Pro", monospace;
+    display: block;
+    margin: 0px;
+    overflow: auto;
+    padding: 1rem 2.3rem 1rem 1rem;
+}
+.st-emotion-cache-zy6yx3 {
+    width: 100%;
+    padding: 2rem 1rem 10rem;
+    max-width: initial;
+    min-width: auto;
+}
