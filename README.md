@@ -75,7 +75,8 @@ A Streamlit-based web application that generates concise summaries from large bl
    ```bash
    docker-compose up
    ```
-
+# After container starts, access the app in your browser at:
+# http://localhost:8501
 5. The application will be available at `http://localhost:8501`
 
 ##### Additional Docker Options:
